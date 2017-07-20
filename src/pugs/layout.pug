@@ -1,0 +1,30 @@
+include _common/variables.pug
+include _common/mixins.pug
+
+doctype html
+html
+	head(lang='en En')
+		meta(charset='utf-8')
+		link(rel="stylesheet", href="css/main.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
+		block title
+			title Страница шаблона
+	body
+		block header
+			include _common/header
+		block aboutUs
+			include _common/aboutUs
+		block realization
+			include _common/realization
+		block latestProjects
+			include _common/latestProjects
+		block videoPresentation
+			include _common/videoPresentation
+		block mobile
+			include _common/mobile
+		block posts
+			include _common/posts
+		block footer
+			include _common/footer
+		script(src='js/main.js')

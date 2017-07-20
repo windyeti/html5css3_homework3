@@ -1,0 +1,114 @@
+.posts {
+	padding-top: 76px;
+}
+.posts__item {
+	box-sizing: border-box;
+	float: left;
+	width: 33.3333%;
+	padding: 0 15px;
+}
+.posts__link {
+	border: 1px solid  #f8f8f8;
+	text-decoration: none;
+	display: block;
+	position: relative;
+}
+.posts__img {
+	height: 220px;
+}
+
+@include posts($postsItem);
+@include postsHover($postsItem);
+
+.posts__time {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	// outline: 1px solid red;
+	text-align: center;
+}
+.posts__day {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	width: 50px;
+	height: 35px;
+	background-color: #363636;
+	font-size: 150%;
+	line-height: 150%;
+	color: #fff;
+}
+.posts__month {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background-color:  #252525;
+	width: 50px;
+	height: 25px;
+	color: #fff;
+	font-family: 'Roboto';
+	font-size: 87.5%;
+	font-weight: 400;
+	line-height: 190%;
+	text-align: center;
+}
+.posts__about {
+	padding: 27px 29px;
+}
+.posts__about__head {
+	font-family: 'Raleway';
+	color:  $gray;
+	font-size: 20px;
+	font-weight: 500;
+	padding-bottom: 15px;
+}
+.posts__about__text {
+	color:  #8c8c8c;
+	font-size: 87.5%;
+	line-height: 155%;
+	padding-bottom: 18px;
+}
+.posts__readMore {
+	display: inline-block;
+	position: relative;
+	color:  $bej;
+	font-size: 87.55%;
+	line-height: 125%;
+	&:hover {
+		color: #fff;
+		&:after {
+			border: 5px solid transparent;
+			border-left: 5px solid #fff;
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		right: -15px;
+		border: 5px solid transparent;
+		border-left: 5px solid $bej;
+	}
+}
+.posts__arrows {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 0;
+}
+.posts__arrow {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	padding: 0 5px;
+	cursor: pointer;
+}
+.posts__arrows__left {
+	background: url('../images/arrowsPost.svg') -2px -9px no-repeat;
+	&:hover {
+		background-position-y: -49px;
+	}
+}
+.posts__arrows__right {
+	background: url('../images/arrowsPost.svg') -45px -9px no-repeat;
+	&:hover {
+		background-position-y: -49px;
+	}
+}

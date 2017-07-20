@@ -1,0 +1,120 @@
+.latestProjects {
+	padding-top: 76px;
+	padding-bottom: 80px;
+}
+.latestProjects__chooser {
+	text-align: center;
+	font-size: 0;
+	padding-bottom: 40px;
+}
+.latestProjects__item {
+	display: inline-block;
+	// border: 1px solid red;
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+	margin: 0 5px;
+	padding: 9px 20px 8px;
+    font-size: 14px;
+    line-height: 13px;
+	color: #8c8c8c;
+	cursor: pointer;
+	transition: all .2s;
+	&:hover {
+		background-color: $lightbrown;
+		color: #fff;
+	}
+}
+.latestProjects__item_active {
+	color: #fff;
+	background-color: $brown;
+}
+// ----------------
+.latestProjects__projects {
+	padding-bottom: 9px;
+}
+.latestProjects__project {
+	float: left;
+	box-sizing: border-box;
+	width: 33.33%;
+	padding: 0 15px 25px;
+	display: block;
+	text-decoration: none;
+}
+.latestProjects__blockImg {
+	position: relative;
+	overflow: hidden;
+	height: 237px;
+	transition: all .5s;
+	&:after {
+		position: absolute;
+		left: 19px;
+		bottom: 0;
+		content: "";
+		border: 15px solid transparent;
+		border-bottom: 10px solid #fbfaf8;
+		transition: all .5s;
+	}
+}
+.latestProjects__searchLinkIcons {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 80px;
+	height: 26px;
+	margin: auto;
+	background: url("../images/searchLink.png") 0 0 no-repeat;
+	opacity: 0;
+	transition: opacity 1s;
+}
+@include project(6);
+.latestProjects__project:hover .latestProjects__blockImg {
+	background-position-y: -237px;
+	&:after {
+		border-bottom: 10px solid #362f2d;
+	}
+}
+.latestProjects__project:hover .latestProjects__down {
+	background-color: #362f2d;
+}
+.latestProjects__project:hover .latestProjects__nameProject {
+	color: #fff;
+}
+.latestProjects__project:hover .latestProjects__category {
+	color: $bej;
+}
+.latestProjects__project:hover .latestProjects__searchLinkIcons {
+	opacity: 1;
+}
+// .latestProjects__img {
+// 	width: 100%;
+// 	margin-bottom: -4px;
+// }
+.latestProjects__down {
+	padding-top: 26px;
+	padding-left: 30px;
+	padding-bottom: 27px;
+	background-color: #fbfaf8;
+	transition: all .5s;
+}
+.latestProjects__nameProject {
+	font-family: 'Raleway';
+	font-weight: 500;
+	margin: 0;
+	color: #c7b29a;
+	font-size: 125%;
+	transition: all .5s;
+}
+.latestProjects__category {
+	color: #d1d1d1;
+	line-height: 183%;
+	transition: all .5s;
+}
+.latestProjects__button {
+	box-sizing: border-box;
+	width: 14.53%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 360%;
+}

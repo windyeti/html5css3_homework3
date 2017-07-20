@@ -79,7 +79,7 @@ gulp.task('build:css', function() {
 		browsers:['last 4 versions'],
 		cascade: false
 	}))
-	.pipe(minifycss())
+	// .pipe(minifycss())
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(path.build.css))
 	.pipe(reload({stream:true}))

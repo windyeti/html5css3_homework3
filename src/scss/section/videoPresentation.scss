@@ -1,0 +1,39 @@
+.videoPresentation {
+	position: relative;
+}
+.videoPresentation__video {
+	max-height: 705px;
+	margin: 0 auto;
+	width: 100%;
+	display: block;
+}
+.videoPresentation__underVideo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+.videoPresentation__control {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: 210px auto 40px;
+	background: rgba(0, 0, 0, 0.2) url('../images/iconPlay.svg') 50% 50% no-repeat;
+	transition: all .5s;
+	cursor: pointer;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+.videoPresentation__head {
+	color: #fff;
+}
+.videoPresentation__text {
+	color: #fff;
+}
+.videoPresentation__date {
+	font-size: 87.5%;
+	color: $bej;
+}

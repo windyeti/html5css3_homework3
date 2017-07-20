@@ -1,0 +1,70 @@
+mixin menu(activeElement)
+	ul.menu__items
+		each item, key in menuItems
+			li.menu__item
+				a.menu__link(class={menu__link_active : key === activeElement} href='#'+key)= item
+
+mixin aboutUs(aboutUsData)
+	a.aboutUs__item(href='#')
+		.aboutUs__icon(class='aboutUs__icon_' + aboutUsData.nameItem)
+		h2.aboutUs__head= aboutUsData.textHead
+		.aboutUs__text= aboutUsData.textMain
+		.aboutUs__blocUnderLine
+			.aboutUs__underLine
+
+mixin chooser(items, activeElement)
+	.latestProjects__chooser
+		each item, key in items
+			.latestProjects__item(class={latestProjects__item_active : key === activeElement})= item
+
+mixin project(items)
+	.latestProjects__projects.clearfix
+		- for(var i = 0; i < items.length; i++)
+			a.latestProjects__project(href= items[i].imageName+'.html')
+				.latestProjects__blockImg(class='latestProjects__blockImg_' + i)
+					.latestProjects__searchLinkIcons
+					//- img.latestProjects__img(src='images/'+ items[i].imageName +'.jpg' title='' alt='')
+				.latestProjects__down
+					h3.latestProjects__nameProject= items[i].nameProject
+					.latestProjects__category= items[i].category
+
+mixin advantages(items, countCategory)
+	- for(var i = 0; i < items.length; i++)
+		.mobile__advantage
+			.mobile__icon(class='mobile__icon_'+ items[i].category)
+			if items[i].category == countCategory
+				.mobile__number(id=countCategory)= items[i].number
+			else
+				.mobile__number= items[i].number
+			//- .mobile__number(class={'cups' : items[i].category == countCategory})= items[i].number
+			.mobile__textAbout= items[i].textAbout
+			.mobile__line
+
+mixin postItems(items)
+	.posts__items.clearfix
+		- for (var i = 0; i < items.length; i++)
+			.posts__item
+				a.posts__link(href='posts_'+items[i].category+'.html')
+					.posts__img(class='posts__img_' + items[i].category)
+					.posts__time
+						.posts__day 30
+						.posts__month Sep.
+					.posts__about
+						.posts__about__head= items[i].head
+						.posts__about__text= items[i].textAbout
+						.posts__readMore Read More
+
+mixin partnersLogo(items)
+	each item in items
+		a.upFooter__link(href='partner_'+item+'.html')
+			img.upFooter__img(src='images/partner_'+item+'.png')
+
+mixin dribbbleWidget(items)
+	.middleFooter__widget__head Dribbble Widget
+	.middleFooter__widget__items
+		each item in items
+			a.middleFooter__widget__link(href='widget_'+item+'.html')
+				img.middleFooter__widget__img(src='images/widget_'+item+'.jpg')
+
+
+

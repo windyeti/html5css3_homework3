@@ -1,0 +1,78 @@
+.mobile {
+	height: 695px;
+	background-color: #fbfaf8;
+}
+.mobile__blockImg {
+	float: left;
+	padding-top: 79px;
+	padding-left: 76px;
+}
+.mobile__img {
+	margin-bottom: -5px;
+}
+.mobile__info {
+	margin-left: 530px;
+}
+.mobile__head {
+	padding-top: 190px;
+	padding-bottom: 12px;
+	text-align: left;
+	color: $gray;
+}
+.mobile__text {
+	width: 97%;
+	text-align: left;
+	color: #8c8c8c;
+	line-height: 175%;
+	margin: 0;
+	padding-bottom: 30px;
+}
+.mobile__items {
+	margin: 0;
+	color: #8c8c8c;
+	list-style: none;
+	padding-left: 47px;
+}
+.mobile__item {
+	padding-left: 52px;
+	line-height: 200%;
+	background: url('../images/roundArrow.svg') 3px 7px no-repeat;
+}
+// footer
+.mobile__footer {
+	background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+.container_mobile {
+	text-align: center;
+}
+.mobile__advantage {
+	display: inline-block;
+	box-sizing: border-box;
+	height: 300px;
+	padding: 0 37px;
+}
+.mobile__icon {
+	width: 120px;
+	height: 102px;
+	margin: 30px auto 0;
+}
+
+@include advantages($agvantages)
+
+.mobile__number {
+	font-size: 300%;
+	color: #fff;
+	font-weight: 200;
+	padding-bottom: 5px;
+}
+.mobile__textAbout {
+	font-size: 87.5%;
+	color: $bej;
+	text-transform: uppercase;
+}
+.mobile__line {
+	margin: 27px auto 0;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+}
