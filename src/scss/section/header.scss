@@ -5,9 +5,15 @@
 	position: relative;
 	width: 100%;
 	height: 1024px;
+	overflow: hidden;
 }
 .slider__bkg {
-	height: 1024px;
+	// height: 1024px;	
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
 }
 .slider__bkg_1 {
 	background: url('../images/slider01.jpg') 50% 0 no-repeat;
@@ -42,6 +48,14 @@
 	display: block;
 	margin-top: 50px;
 }
+.slider__arrows {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
 .slider__arrow {
 	width: 40px;
 	height: 100%;
@@ -71,6 +85,7 @@
 	margin: 0 auto;
 	width: 100%;
 	font-size: 0;
+	z-index: 98;
 }
 .slider__point {
 	display: inline-block;
@@ -95,6 +110,7 @@
 	left: 0;
 	width: 100%;
 	text-align: right;
+	z-index: 99;
 }
 .header__logo__link {
 	float: left;
@@ -172,3 +188,18 @@
 		background: url('../images/iconMenu.png') -49px -51px no-repeat;
 	}
 }
+// -------- for action
+.slider__items {
+	position: relative;
+	height: 100%;
+}
+.toCenter {
+	z-index: 2;
+	left: 0;
+	transition: left 1s;
+}
+.toRight {
+	left: -100%;
+	transition: left 1s;
+}
+// ------------
